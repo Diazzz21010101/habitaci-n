@@ -1128,340 +1128,414 @@ button:hover {
 
 
 /* ==================================================
-   CELULAR
+   CELULAR - DISEÑO ADAPTADO
 ================================================== */
 
 @media (max-width: 700px) {
 
+    html,
     body {
+        width: 100%;
+        height: 100%;
         overflow: hidden;
     }
 
+    .habitacion {
+        width: 100vw;
+        height: 100dvh;
+        overflow: hidden;
+    }
 
-    .pantalla-inicio {
-        padding: 25px;
+    /* =========================
+       PARED
+    ========================= */
+
+    .pared {
+        width: 100%;
+        height: 100%;
+    }
+
+    /* =========================
+       TECHO
+    ========================= */
+
+    .techo {
+        height: 7vh;
+    }
+
+    /* =========================
+       PISO
+    ========================= */
+
+    .piso {
+        height: 22vh;
     }
 
 
-    .pantalla-inicio h1 {
-
-        font-size: 65px;
-
-    }
-
-
-    .pantalla-inicio p:not(.mini) {
-
-        font-size: 14px;
-
-    }
-
-
-    /* VENTANA */
+    /* =========================
+       VENTANA
+    ========================= */
 
     .ventana {
+        left: 5vw;
+        top: 14vh;
 
-        left: 5%;
+        width: 27vw;
+        height: 23vw;
 
-        top: 12%;
+        min-width: 105px;
+        min-height: 90px;
 
-        width: 115px;
-
-        height: 105px;
+        max-width: 135px;
+        max-height: 115px;
 
         border-width: 6px;
-
     }
-
 
     .luna {
-
+        right: 8px;
+        top: 6px;
         font-size: 25px;
-
-        right: 10px;
-
-        top: 8px;
-
     }
-
 
     .estrella {
+        font-size: 9px;
+    }
 
-        font-size: 10px;
+    .e1 {
+        left: 15px;
+        top: 20px;
+    }
 
+    .e2 {
+        left: 45px;
+        top: 45px;
+    }
+
+    .e3 {
+        right: 25px;
+        bottom: 20px;
+    }
+
+    .e4 {
+        left: 25px;
+        bottom: 15px;
     }
 
 
-    /* CUADRO */
+    /* =========================
+       CUADRO
+    ========================= */
 
     .cuadro {
+        right: 6vw;
+        top: 13vh;
 
-        right: 6%;
+        width: 24vw;
+        height: 30vw;
 
-        top: 12%;
+        min-width: 95px;
+        min-height: 115px;
 
-        width: 100px;
-
-        height: 125px;
+        max-width: 120px;
+        max-height: 145px;
 
         padding: 6px;
-
     }
-
 
     .cuadro-interior {
-
         font-size: 27px;
-
     }
 
 
-    /* ESTANTE */
+    /* =========================
+       ESTANTE
+    ========================= */
 
     .estante {
-
-        left: 35%;
-
-        top: 20%;
+        left: 50%;
+        top: 27vh;
 
         width: 120px;
+        height: 75px;
 
-        transform: scale(.75);
+        transform: translateX(-50%);
+    }
 
-        transform-origin: left;
+    .libro {
+        width: 22px;
+        height: 50px;
+    }
 
+    .l1 {
+        left: 10px;
+    }
+
+    .l2 {
+        left: 35px;
+        height: 58px;
+    }
+
+    .l3 {
+        left: 60px;
+        height: 43px;
+    }
+
+    .peluche {
+        right: 4px;
+        bottom: 3px;
+        font-size: 38px;
     }
 
 
-    /* CAMA */
+    /* =========================
+       CAMA
+    ========================= */
 
     .cama {
+        left: 50%;
+        bottom: 20vh;
 
-        left: 3%;
+        width: 300px;
+        height: 175px;
 
-        bottom: 21vh;
-
-        width: 270px;
-
-        height: 160px;
-
-        transform: scale(.8);
-
-        transform-origin: bottom left;
-
+        transform: translateX(-50%);
     }
-
 
     .cabecero {
-
-        height: 160px;
-
+        width: 35px;
+        height: 165px;
     }
-
 
     .colchon {
+        left: 28px;
 
-        width: 240px;
-
+        width: 272px;
         height: 90px;
-
     }
 
+    .almohada {
+        top: 12px;
+        left: 18px;
+
+        width: 80px;
+        height: 45px;
+    }
 
     .cobija {
-
-        width: 170px;
-
+        width: 185px;
         height: 75px;
 
+        font-size: 25px;
     }
 
 
-    /* ESCRITORIO */
+    /* =========================
+       ESCRITORIO
+    ========================= */
 
     .escritorio {
+        left: 50%;
+        bottom: 20vh;
 
-        left: 25%;
+        width: 210px;
+        height: 120px;
 
-        bottom: 21vh;
-
-        width: 220px;
-
-        height: 125px;
-
-        transform: scale(.8);
-
-        transform-origin: bottom left;
-
+        transform: translateX(-50%);
     }
-
 
     .computador {
+        left: 20px;
+        bottom: 20px;
 
-        left: 15px;
-
-        width: 110px;
-
+        width: 100px;
     }
-
 
     .pantalla {
-
-        height: 75px;
-
-        font-size: 14px;
-
-    }
-
-
-    .pantalla-corazon {
-
-        font-size: 20px;
-
-    }
-
-
-    .lampara {
-
-        right: 5px;
-
-        transform: scale(.7);
-
-        transform-origin: bottom;
-
-    }
-
-
-    .carta {
-
-        left: 140px;
-
-        font-size: 30px;
-
-    }
-
-
-    /* PARLANTE */
-
-    .parlante {
-
-        right: 4%;
-
-        bottom: 23vh;
-
-        transform: scale(.7);
-
-    }
-
-
-    /* PUERTA */
-
-    .puerta {
-
-        right: -5px;
-
-        bottom: 21vh;
-
-        width: 85px;
-
-        height: 210px;
+        height: 65px;
 
         border-width: 5px;
 
+        font-size: 13px;
     }
 
-
-    .puerta::before {
-
-        left: 12px;
-
-        right: 12px;
-
-        top: 20px;
-
-        height: 60px;
-
+    .pantalla-corazon {
+        font-size: 18px;
     }
 
+    .base {
+        width: 50px;
+        height: 8px;
+    }
 
-    .puerta::after {
-
-        left: 12px;
-
-        right: 12px;
-
+    .lampara {
+        right: 5px;
         bottom: 20px;
 
-        height: 75px;
+        transform: scale(.65);
+        transform-origin: bottom right;
+    }
 
+    .carta {
+        left: 125px;
+        bottom: 20px;
+
+        font-size: 27px;
     }
 
 
-    /* MÚSICA */
+    /* =========================
+       PARLANTE
+    ========================= */
+
+    .parlante {
+        right: 5vw;
+        bottom: 24vh;
+
+        width: 70px;
+        height: 105px;
+
+        transform: none;
+    }
+
+    .parlante-arriba {
+        height: 10px;
+    }
+
+    .parlante-circulo {
+        width: 42px;
+        height: 42px;
+
+        left: 9px;
+        top: 25px;
+    }
+
+    .parlante-circulo.pequeño {
+        width: 22px;
+        height: 22px;
+
+        left: 19px;
+        top: 72px;
+    }
+
+
+    /* =========================
+       PUERTA
+    ========================= */
+
+    .puerta {
+        right: 2vw;
+        bottom: 20vh;
+
+        width: 80px;
+        height: 205px;
+
+        border-width: 5px;
+    }
+
+    .puerta::before {
+        left: 11px;
+        right: 11px;
+        top: 18px;
+
+        height: 58px;
+
+        border-width: 4px;
+    }
+
+    .puerta::after {
+        left: 11px;
+        right: 11px;
+        bottom: 18px;
+
+        height: 72px;
+
+        border-width: 4px;
+    }
+
+    .manija {
+        right: 10px;
+
+        width: 10px;
+        height: 10px;
+    }
+
+
+    /* =========================
+       TEXTO INFERIOR
+    ========================= */
+
+    .ayuda {
+        bottom: 4vh;
+
+        width: 100%;
+        padding: 0 20px;
+
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+
+
+    /* =========================
+       BOTÓN DE MÚSICA
+    ========================= */
 
     .boton-musica {
+        right: 18px;
+        top: 18px;
 
-        right: 15px;
+        width: 48px;
+        height: 48px;
 
-        top: 15px;
-
-        width: 45px;
-
-        height: 45px;
-
+        font-size: 19px;
     }
 
 
-    /* MODAL */
+    /* =========================
+       MODAL
+    ========================= */
+
+    .modal {
+        padding: 15px;
+    }
 
     .modal-contenido {
+        width: 92vw;
+        max-height: 85vh;
 
-        padding: 35px 25px;
+        padding: 30px 20px;
 
+        overflow-y: auto;
     }
-
 
     .modal-contenido h2 {
-
-        font-size: 38px;
-
+        font-size: 36px;
     }
-
 
     .modal-contenido p {
-
         font-size: 14px;
-
+        line-height: 1.7;
     }
 
 
-    /* FINAL */
+    /* =========================
+       PANTALLA FINAL
+    ========================= */
 
     .final-contenido {
-
         width: 90%;
-
     }
-
 
     .final h1 {
-
-        font-size: 70px;
-
+        font-size: clamp(55px, 17vw, 75px);
     }
-
 
     .final h2 {
-
-        font-size: 45px;
-
+        font-size: clamp(35px, 11vw, 50px);
     }
-
 
     .final p {
-
         font-size: 14px;
-
+        line-height: 1.7;
     }
-
 }
