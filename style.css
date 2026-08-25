@@ -1,0 +1,1467 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background: #090508;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    overflow: hidden;
+}
+
+
+/* =========================
+   INICIO
+========================= */
+
+.pantalla-inicio {
+    position: fixed;
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #4b1028 0%,
+            #1b0710 40%,
+            #090508 75%
+        );
+
+    z-index: 100;
+}
+
+
+.inicio-contenido {
+    animation: aparecer 2s ease;
+}
+
+
+.corazon-grande {
+    color: #e21e5a;
+    font-size: 70px;
+
+    animation: latir 1.5s infinite;
+}
+
+
+.mini {
+    color: #cf6487;
+    font-size: 11px;
+    letter-spacing: 4px;
+    margin: 20px 0;
+}
+
+
+.pantalla-inicio h1 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(60px, 10vw, 110px);
+
+    font-weight: 500;
+}
+
+
+.pantalla-inicio p:not(.mini) {
+    color: #c7b6bc;
+    margin-top: 12px;
+}
+
+
+button {
+    border: 1px solid #a51e4c;
+
+    background: transparent;
+
+    color: white;
+
+    padding: 14px 35px;
+
+    border-radius: 40px;
+
+    margin-top: 35px;
+
+    cursor: pointer;
+
+    transition: .4s;
+}
+
+
+button:hover {
+    background: #a51e4c;
+
+    transform: translateY(-3px);
+}
+
+
+.oculto {
+    display: none !important;
+}
+
+
+/* =========================
+   HABITACIÓN
+========================= */
+
+.habitacion {
+    position: fixed;
+    inset: 0;
+}
+
+
+.pared {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            #211018,
+            #160b11
+        );
+}
+
+
+.techo {
+    position: absolute;
+
+    width: 100%;
+    height: 8vh;
+
+    background: #0d070a;
+
+    z-index: 5;
+}
+
+
+/* =========================
+   PISO
+========================= */
+
+.piso {
+    position: absolute;
+
+    bottom: 0;
+
+    width: 100%;
+    height: 22vh;
+
+    background:
+        repeating-linear-gradient(
+            90deg,
+            #211116 0px,
+            #211116 90px,
+            #29151c 92px,
+            #29151c 180px
+        );
+
+    border-top: 4px solid #321720;
+}
+
+
+/* =========================
+   OBJETOS
+========================= */
+
+.objeto {
+    cursor: pointer;
+
+    transition: .4s;
+
+    filter:
+        drop-shadow(
+            0 0 0 transparent
+        );
+}
+
+
+.objeto:hover {
+    transform: scale(1.06);
+
+    filter:
+        drop-shadow(
+            0 0 15px #d51f58
+        );
+}
+
+
+/* =========================
+   VENTANA
+========================= */
+
+.ventana {
+    position: absolute;
+
+    left: 12%;
+    top: 16%;
+
+    width: 220px;
+    height: 190px;
+
+    border: 10px solid #30151e;
+
+    background: #08040a;
+}
+
+
+.cielo {
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at 70% 30%,
+            #472052,
+            #151026 65%,
+            #08040a
+        );
+}
+
+
+.luna {
+    position: absolute;
+
+    right: 25px;
+    top: 20px;
+
+    font-size: 45px;
+
+    color: #fff1d5;
+}
+
+
+.estrella {
+    position: absolute;
+
+    color: #e8d6e0;
+
+    animation: parpadear 2s infinite;
+}
+
+
+.e1 {
+    left: 20px;
+    top: 30px;
+}
+
+
+.e2 {
+    left: 80px;
+    top: 80px;
+}
+
+
+.e3 {
+    right: 60px;
+    bottom: 35px;
+}
+
+
+.e4 {
+    left: 40px;
+    bottom: 25px;
+}
+
+
+.ventana-marco {
+    position: absolute;
+
+    left: 50%;
+    top: 0;
+    bottom: 0;
+
+    width: 6px;
+
+    background: #30151e;
+}
+
+
+.ventana::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    top: 50%;
+
+    height: 6px;
+
+    background: #30151e;
+}
+
+
+/* =========================
+   CUADRO
+========================= */
+
+.cuadro {
+    position: absolute;
+
+    right: 18%;
+    top: 15%;
+
+    width: 180px;
+    height: 220px;
+
+    padding: 10px;
+
+    background: #7d5360;
+
+    transform: rotate(2deg);
+}
+
+
+.cuadro-interior {
+    width: 100%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #45152a,
+            #180711
+        );
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 45px;
+}
+
+
+.cuadro-interior small {
+    color: #e21e5a;
+}
+
+
+/* =========================
+   ESTANTE
+========================= */
+
+.estante {
+    position: absolute;
+
+    left: 42%;
+    top: 20%;
+
+    width: 190px;
+    height: 100px;
+
+    border-bottom: 12px solid #391c27;
+}
+
+
+.libro {
+    position: absolute;
+
+    bottom: 10px;
+
+    width: 30px;
+    height: 65px;
+
+    background: #7d2949;
+}
+
+
+.l1 {
+    left: 15px;
+}
+
+
+.l2 {
+    left: 50px;
+
+    height: 75px;
+
+    background: #b05a76;
+}
+
+
+.l3 {
+    left: 85px;
+
+    height: 55px;
+
+    background: #4f2638;
+}
+
+
+.peluche {
+    position: absolute;
+
+    right: 10px;
+    bottom: 5px;
+
+    font-size: 50px;
+}
+
+
+/* =========================
+   ESCRITORIO
+========================= */
+
+.escritorio {
+    position: absolute;
+
+    left: 38%;
+    bottom: 22vh;
+
+    width: 400px;
+    height: 180px;
+}
+
+
+.tabla-escritorio {
+    position: absolute;
+
+    bottom: 0;
+
+    width: 100%;
+    height: 20px;
+
+    background: #4a2631;
+}
+
+
+.tabla-escritorio::after {
+    content: "";
+
+    position: absolute;
+
+    left: 30px;
+    top: 20px;
+
+    width: 20px;
+    height: 140px;
+
+    background: #321b24;
+
+    box-shadow:
+        320px 0 #321b24;
+}
+
+
+/* COMPUTADOR */
+
+.computador {
+    position: absolute;
+
+    left: 80px;
+    bottom: 20px;
+
+    width: 170px;
+}
+
+
+.pantalla {
+    height: 110px;
+
+    border: 8px solid #272027;
+
+    background:
+        radial-gradient(
+            circle,
+            #7c163c,
+            #13060c
+        );
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #e9b7c8;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 20px;
+}
+
+
+.pantalla-corazon {
+    color: #e21e5a;
+
+    font-size: 30px;
+}
+
+
+.base {
+    width: 70px;
+    height: 10px;
+
+    margin: auto;
+
+    background: #272027;
+}
+
+
+/* LÁMPARA */
+
+.lampara {
+    position: absolute;
+
+    right: 30px;
+    bottom: 20px;
+
+    width: 80px;
+    height: 150px;
+}
+
+
+.pantalla-lampara {
+    width: 70px;
+    height: 50px;
+
+    background: #d88a9f;
+
+    border-radius: 50% 50% 15% 15%;
+
+    box-shadow:
+        0 0 30px #c65c7d;
+}
+
+
+.palo {
+    width: 8px;
+    height: 70px;
+
+    margin: auto;
+
+    background: #6d4854;
+}
+
+
+.base-lampara {
+    width: 50px;
+    height: 10px;
+
+    background: #6d4854;
+
+    margin: auto;
+}
+
+
+/* CARTA */
+
+.carta {
+    position: absolute;
+
+    left: 275px;
+    bottom: 25px;
+
+    font-size: 40px;
+}
+
+
+/* =========================
+   CAMA
+========================= */
+
+.cama {
+    position: absolute;
+
+    left: 8%;
+    bottom: 22vh;
+
+    width: 390px;
+    height: 230px;
+}
+
+
+.cabecero {
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 45px;
+    height: 220px;
+
+    background: #3b1c28;
+
+    border-radius: 10px 10px 0 0;
+}
+
+
+.colchon {
+    position: absolute;
+
+    left: 35px;
+    bottom: 0;
+
+    width: 355px;
+    height: 120px;
+
+    background: #e4d9dd;
+
+    border-radius: 10px;
+}
+
+
+.almohada {
+    position: absolute;
+
+    top: 15px;
+    left: 25px;
+
+    width: 100px;
+    height: 55px;
+
+    border-radius: 10px;
+
+    background: #f4eef0;
+}
+
+
+.cobija {
+    position: absolute;
+
+    right: 0;
+    bottom: 0;
+
+    width: 250px;
+    height: 100px;
+
+    border-radius: 40px 10px 10px 10px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #711e40,
+            #421426
+        );
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    font-size: 30px;
+}
+
+
+/* =========================
+   PARLANTE
+========================= */
+
+.parlante {
+    position: absolute;
+
+    right: 10%;
+    bottom: 24vh;
+
+    width: 100px;
+    height: 150px;
+
+    background: #171217;
+
+    border: 5px solid #3a2730;
+
+    border-radius: 10px;
+}
+
+
+.parlante-arriba {
+    height: 15px;
+
+    background: #312129;
+}
+
+
+.parlante-circulo {
+    position: absolute;
+
+    width: 60px;
+    height: 60px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            #0b080a 25%,
+            #54263a 27%,
+            #54263a 45%,
+            #171217 47%
+        );
+
+    left: 15px;
+    top: 35px;
+}
+
+
+.parlante-circulo.pequeño {
+    width: 30px;
+    height: 30px;
+
+    top: 105px;
+    left: 30px;
+}
+
+
+/* =========================
+   PUERTA
+========================= */
+
+.puerta {
+    position: absolute;
+
+    right: 3%;
+    bottom: 22vh;
+
+    width: 130px;
+    height: 300px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #30151e,
+            #4a202f,
+            #30151e
+        );
+
+    border: 8px solid #211018;
+}
+
+
+.puerta::before {
+    content: "";
+
+    position: absolute;
+
+    left: 20px;
+    right: 20px;
+    top: 30px;
+
+    height: 90px;
+
+    border: 5px solid #28131b;
+}
+
+
+.puerta::after {
+    content: "";
+
+    position: absolute;
+
+    left: 20px;
+    right: 20px;
+    bottom: 30px;
+
+    height: 110px;
+
+    border: 5px solid #28131b;
+}
+
+
+.manija {
+    position: absolute;
+
+    right: 15px;
+    top: 50%;
+
+    width: 12px;
+    height: 12px;
+
+    border-radius: 50%;
+
+    background: #d3a2af;
+
+    z-index: 2;
+}
+
+
+.placa {
+    position: absolute;
+
+    top: 20px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    color: #d51f58;
+}
+
+
+.puerta.desbloqueada {
+
+    animation:
+        puertaBrilla 1s infinite alternate;
+
+}
+
+
+/* =========================
+   AYUDA
+========================= */
+
+.ayuda {
+    position: absolute;
+
+    bottom: 20px;
+
+    width: 100%;
+
+    text-align: center;
+
+    color: #9e808b;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================
+   BOTÓN DE MÚSICA
+========================= */
+
+.boton-musica {
+    position: fixed;
+
+    right: 25px;
+    top: 25px;
+
+    z-index: 50;
+
+    width: 50px;
+    height: 50px;
+
+    padding: 0;
+    margin: 0;
+
+    border-radius: 50%;
+
+    background: rgba(20, 8, 14, .8);
+
+    border: 1px solid #743047;
+
+    font-size: 20px;
+}
+
+
+/* =========================
+   MODAL
+========================= */
+
+.modal {
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(5, 2, 4, .85);
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 200;
+
+    padding: 20px;
+}
+
+
+.modal-contenido {
+    position: relative;
+
+    width: min(500px, 95vw);
+
+    padding: 50px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            #251018,
+            #11070c
+        );
+
+    border: 1px solid #743047;
+
+    box-shadow:
+        0 20px 80px rgba(0,0,0,.7);
+
+    animation: aparecer .5s ease;
+}
+
+
+.modal-contenido h2 {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 45px;
+
+    margin: 15px 0;
+
+}
+
+
+.modal-contenido p {
+
+    color: #c6b5bb;
+
+    line-height: 1.8;
+
+}
+
+
+#modal-icono {
+
+    color: #e21e5a;
+
+    font-size: 50px;
+
+}
+
+
+.cerrar {
+
+    position: absolute;
+
+    right: 15px;
+    top: 10px;
+
+    margin: 0;
+
+    border: none;
+
+    font-size: 30px;
+
+    padding: 0;
+
+    color: #bca6ae;
+}
+
+
+.cerrar:hover {
+
+    background: transparent;
+
+}
+
+
+/* =========================
+   FINAL
+========================= */
+
+.final {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 500;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle,
+            #4a0b21,
+            #15060c 55%,
+            #080406
+        );
+
+}
+
+
+.final-contenido {
+
+    width: min(700px, 90%);
+
+    animation: aparecer 2s ease;
+
+}
+
+
+.corazon-final {
+
+    color: #e21e5a;
+
+    font-size: 80px;
+
+    animation: latir 1.5s infinite;
+
+}
+
+
+.final h1 {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 100px;
+
+    font-weight: 500;
+
+}
+
+
+.final p {
+
+    color: #c5b4bb;
+
+    line-height: 1.9;
+
+    margin: 15px 0;
+
+}
+
+
+.final h2 {
+
+    font-family: "Cormorant Garamond", serif;
+
+    color: #e21e5a;
+
+    font-size: 65px;
+
+    margin: 35px 0;
+
+}
+
+
+.final span {
+
+    color: #9d7e89;
+
+}
+
+
+/* =========================
+   ANIMACIONES
+========================= */
+
+@keyframes aparecer {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(25px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+@keyframes latir {
+
+    0%, 100% {
+
+        transform: scale(1);
+
+    }
+
+    50% {
+
+        transform: scale(1.2);
+
+    }
+
+}
+
+
+@keyframes parpadear {
+
+    50% {
+
+        opacity: .2;
+
+    }
+
+}
+
+
+@keyframes puertaBrilla {
+
+    from {
+
+        box-shadow:
+            0 0 10px #d51f58;
+
+    }
+
+    to {
+
+        box-shadow:
+            0 0 40px #d51f58;
+
+    }
+
+}
+
+
+/* ==================================================
+   CELULAR
+================================================== */
+
+@media (max-width: 700px) {
+
+    body {
+        overflow: hidden;
+    }
+
+
+    .pantalla-inicio {
+        padding: 25px;
+    }
+
+
+    .pantalla-inicio h1 {
+
+        font-size: 65px;
+
+    }
+
+
+    .pantalla-inicio p:not(.mini) {
+
+        font-size: 14px;
+
+    }
+
+
+    /* VENTANA */
+
+    .ventana {
+
+        left: 5%;
+
+        top: 12%;
+
+        width: 115px;
+
+        height: 105px;
+
+        border-width: 6px;
+
+    }
+
+
+    .luna {
+
+        font-size: 25px;
+
+        right: 10px;
+
+        top: 8px;
+
+    }
+
+
+    .estrella {
+
+        font-size: 10px;
+
+    }
+
+
+    /* CUADRO */
+
+    .cuadro {
+
+        right: 6%;
+
+        top: 12%;
+
+        width: 100px;
+
+        height: 125px;
+
+        padding: 6px;
+
+    }
+
+
+    .cuadro-interior {
+
+        font-size: 27px;
+
+    }
+
+
+    /* ESTANTE */
+
+    .estante {
+
+        left: 35%;
+
+        top: 20%;
+
+        width: 120px;
+
+        transform: scale(.75);
+
+        transform-origin: left;
+
+    }
+
+
+    /* CAMA */
+
+    .cama {
+
+        left: 3%;
+
+        bottom: 21vh;
+
+        width: 270px;
+
+        height: 160px;
+
+        transform: scale(.8);
+
+        transform-origin: bottom left;
+
+    }
+
+
+    .cabecero {
+
+        height: 160px;
+
+    }
+
+
+    .colchon {
+
+        width: 240px;
+
+        height: 90px;
+
+    }
+
+
+    .cobija {
+
+        width: 170px;
+
+        height: 75px;
+
+    }
+
+
+    /* ESCRITORIO */
+
+    .escritorio {
+
+        left: 25%;
+
+        bottom: 21vh;
+
+        width: 220px;
+
+        height: 125px;
+
+        transform: scale(.8);
+
+        transform-origin: bottom left;
+
+    }
+
+
+    .computador {
+
+        left: 15px;
+
+        width: 110px;
+
+    }
+
+
+    .pantalla {
+
+        height: 75px;
+
+        font-size: 14px;
+
+    }
+
+
+    .pantalla-corazon {
+
+        font-size: 20px;
+
+    }
+
+
+    .lampara {
+
+        right: 5px;
+
+        transform: scale(.7);
+
+        transform-origin: bottom;
+
+    }
+
+
+    .carta {
+
+        left: 140px;
+
+        font-size: 30px;
+
+    }
+
+
+    /* PARLANTE */
+
+    .parlante {
+
+        right: 4%;
+
+        bottom: 23vh;
+
+        transform: scale(.7);
+
+    }
+
+
+    /* PUERTA */
+
+    .puerta {
+
+        right: -5px;
+
+        bottom: 21vh;
+
+        width: 85px;
+
+        height: 210px;
+
+        border-width: 5px;
+
+    }
+
+
+    .puerta::before {
+
+        left: 12px;
+
+        right: 12px;
+
+        top: 20px;
+
+        height: 60px;
+
+    }
+
+
+    .puerta::after {
+
+        left: 12px;
+
+        right: 12px;
+
+        bottom: 20px;
+
+        height: 75px;
+
+    }
+
+
+    /* MÚSICA */
+
+    .boton-musica {
+
+        right: 15px;
+
+        top: 15px;
+
+        width: 45px;
+
+        height: 45px;
+
+    }
+
+
+    /* MODAL */
+
+    .modal-contenido {
+
+        padding: 35px 25px;
+
+    }
+
+
+    .modal-contenido h2 {
+
+        font-size: 38px;
+
+    }
+
+
+    .modal-contenido p {
+
+        font-size: 14px;
+
+    }
+
+
+    /* FINAL */
+
+    .final-contenido {
+
+        width: 90%;
+
+    }
+
+
+    .final h1 {
+
+        font-size: 70px;
+
+    }
+
+
+    .final h2 {
+
+        font-size: 45px;
+
+    }
+
+
+    .final p {
+
+        font-size: 14px;
+
+    }
+
+}

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Para Lu ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- MÚSICA -->
+    <audio id="musicaFondo" loop>
+        <source src="cancion.mp3" type="audio/mpeg">
+    </audio>
+
+
+    <!-- PANTALLA DE INICIO -->
+
+    <div id="inicio" class="pantalla-inicio">
+
+        <div class="inicio-contenido">
+
+            <div class="corazon-grande">♥</div>
+
+            <p class="mini">
+                UN PEQUEÑO LUGAR PARA TI
+            </p>
+
+            <h1>
+                Bienvenida, Lu
+            </h1>
+
+            <p>
+                Hice este pequeño lugar pensando en ti.
+            </p>
+
+            <p>
+                Hay algunas cosas que quiero enseñarte...
+            </p>
+
+            <button onclick="entrarHabitacion()">
+                Entrar
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- HABITACIÓN -->
+
+    <main id="habitacion" class="habitacion oculto">
+
+        <div class="techo"></div>
+
+        <div class="pared">
+
+
+            <!-- VENTANA -->
+
+            <div
+                class="ventana objeto"
+                onclick="mostrarMensaje('ventana')">
+
+                <div class="cielo">
+
+                    <div class="luna">☾</div>
+
+                    <div class="estrella e1">✦</div>
+                    <div class="estrella e2">✦</div>
+                    <div class="estrella e3">✦</div>
+                    <div class="estrella e4">✦</div>
+
+                </div>
+
+                <div class="ventana-marco"></div>
+
+            </div>
+
+
+            <!-- CUADRO -->
+
+            <div
+                class="cuadro objeto"
+                onclick="mostrarMensaje('foto')">
+
+                <div class="cuadro-interior">
+
+                    <span>LU</span>
+
+                    <small>♥</small>
+
+                </div>
+
+            </div>
+
+
+            <!-- ESTANTE -->
+
+            <div class="estante">
+
+                <div class="libro l1"></div>
+                <div class="libro l2"></div>
+                <div class="libro l3"></div>
+
+                <div
+                    class="peluche objeto"
+                    onclick="mostrarMensaje('peluche')">
+
+                    🧸
+
+                </div>
+
+            </div>
+
+
+            <!-- ESCRITORIO -->
+
+            <div class="escritorio">
+
+                <div class="tabla-escritorio"></div>
+
+
+                <!-- COMPUTADOR -->
+
+                <div
+                    class="computador objeto"
+                    onclick="mostrarMensaje('computador')">
+
+                    <div class="pantalla">
+
+                        <div class="pantalla-corazon">
+                            ♥
+                        </div>
+
+                        <span>
+                            Para Lu
+                        </span>
+
+                    </div>
+
+                    <div class="base"></div>
+
+                </div>
+
+
+                <!-- LÁMPARA -->
+
+                <div class="lampara">
+
+                    <div class="pantalla-lampara"></div>
+
+                    <div class="palo"></div>
+
+                    <div class="base-lampara"></div>
+
+                </div>
+
+
+                <!-- CARTA -->
+
+                <div
+                    class="carta objeto"
+                    onclick="mostrarMensaje('carta')">
+
+                    💌
+
+                </div>
+
+            </div>
+
+
+            <!-- CAMA -->
+
+            <div class="cama">
+
+                <div class="cabecero"></div>
+
+                <div class="colchon">
+
+                    <div class="almohada"></div>
+
+                    <div class="cobija">
+                        <span>♥</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PARLANTE -->
+
+            <div
+                class="parlante objeto"
+                onclick="mostrarMensaje('musica')">
+
+                <div class="parlante-arriba"></div>
+
+                <div class="parlante-circulo"></div>
+
+                <div class="parlante-circulo pequeño"></div>
+
+            </div>
+
+
+            <!-- PUERTA -->
+
+            <div
+                id="puerta"
+                class="puerta objeto bloqueada"
+                onclick="mostrarPuerta()">
+
+                <div class="manija"></div>
+
+                <div class="placa">
+                    ♥
+                </div>
+
+            </div>
+
+
+            <!-- PISO -->
+
+            <div class="piso"></div>
+
+        </div>
+
+
+        <div class="ayuda">
+            Toca los objetos que brillan
+        </div>
+
+
+        <!-- BOTÓN DE MÚSICA -->
+
+        <button
+            id="botonMusica"
+            class="boton-musica"
+            onclick="alternarMusica()">
+
+            🔊
+
+        </button>
+
+    </main>
+
+
+    <!-- VENTANA DE MENSAJES -->
+
+    <div id="modal" class="modal oculto">
+
+        <div class="modal-contenido">
+
+            <button
+                class="cerrar"
+                onclick="cerrarMensaje()">
+
+                ×
+
+            </button>
+
+            <div id="modal-icono"></div>
+
+            <h2 id="modal-titulo"></h2>
+
+            <p id="modal-texto"></p>
+
+        </div>
+
+    </div>
+
+
+    <!-- FINAL -->
+
+    <div id="final" class="final oculto">
+
+        <div class="final-contenido">
+
+            <div class="corazon-final">
+                ♥
+            </div>
+
+            <p class="mini">
+                HAS ENCONTRADO TODO
+            </p>
+
+            <h1>
+                Lu...
+            </h1>
+
+            <p>
+                Hasta ahora muchas de nuestras historias
+                han ocurrido detrás de una pantalla.
+            </p>
+
+            <p>
+                Pero algún día quiero abrir esa puerta
+                y encontrarte del otro lado.
+            </p>
+
+            <h2>
+                Te amo muchoooo.
+            </h2>
+
+            <span>
+                Mi reina · Mi princesa · Mi vida
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
